@@ -3,7 +3,7 @@
 This is a simple To-Do List Application built using HTML, CSS, and JavaScript.
 It allows users to add, delete, and manage their daily tasks in a clean and interactive way.
 
-✨ Features
+✨ _Features_
 
 ➕ Add new tasks easily
 
@@ -15,7 +15,7 @@ It allows users to add, delete, and manage their daily tasks in a clean and inte
 
 🎨 Responsive and user-friendly design
 
-🛠️ Technologies Used
+🛠️ _Technologies Used_
 
 HTML5 – Structure of the app
 
@@ -23,13 +23,13 @@ CSS3 – Styling and layout
 
 JavaScript (ES6) – Functionality and interactivity
 
-🚀 How to Use
+🚀 _How to Use_
 
-Clone the repository:
+1.Clone the repository:
 
-git clone https://github.com/your-username/todo-app.git
+git clone https://github.com/your-Hassan285hk/todo-app.git
 
 
-Open index.html in your browser.
+2.Open index.html in your browser.
 
-Start adding your tasks! 🎯
+3.Start adding your tasks! 🎯
