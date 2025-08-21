@@ -1,4 +1,4 @@
-📌 To-Do App
+📌 _To-Do App_
 
 This is a simple To-Do List Application built using HTML, CSS, and JavaScript.
 It allows users to add, delete, and manage their daily tasks in a clean and interactive way.
