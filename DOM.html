@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DOM</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo">To-Do App</h1>
+            <ul class="nav-items">
+                <li class="nav-items_btn"><a href="">Home</a></li>
+                <li class="nav-items_btn"><a href="">To-Do</a></li>
+                <li class="nav-items_btn"><a href="">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="task-box">
+            <h1 id="task-title">
+                Manage Tasks
+            </h1>
+            <button class="learn-more" onclick="console.log('Learn more about task management')">Learn More</button>
+        </div>
+    </header>
+    <section class="task-section">
+        <h1>Your Plan For Today !</h1>
+        <form class="task-form">
+            <input type="text" class="task-input" placeholder="Add a new task...">
+            <button type="submit" class="add-task-button">Add Task</button>
+        </form>
+        <ul class="todo_list">
+            <li> <span class="text"></span>
+                <div class="todo_buttons">
+                    <button class="status_button_done">Done</button>
+                    <button class="status_button_remove">Remove</button>
+                </div>
+            </li>
+
+        </ul>
+    </section>
+    <section class="sign-section">
+        <h1>Sign Up</h1>
+        <form class="sign-up-form">
+            <input type="text" class="name-input" placeholder="Enter your name">
+            <input type="email" class="email-input" placeholder="Enter your email">
+            <input type="password" class="password-input" placeholder="Enter your password">
+            <button type="submit" class="sign-up-button">Sign Up</button>
+
+    </section>
+
+    <script>
+        // const todo = document.querySelector(".task-section ul");
+        // todo.innerHTML += "<li>todo 2</li>";
+
+
+        // const first_button = document.querySelector(".learn-more");
+        // first_button.addEventListener("click", function () {
+        //     console.log(this)
+        // })
+
+        // const trybtn = document.querySelector("#task-title");
+        // trybtn.addEventListener("click", () => {
+        //     console.log("hello world")
+        // })
+
+        //working of addding tasks
+        const todo_form = document.querySelector(".task-form");
+        const todo_input = document.querySelector(".task-form input[type = 'text']");
+        const todo_list = document.querySelector(".todo_list");
+        // console.log(todo_input);
+        todo_form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const newtodoitem = todo_input.value;
+            const newli = document.createElement("li");
+            const newliInnerHTML = ` <span class="text">${newtodoitem}</span>
+            <div class="todo_buttons">
+                <button class="status_button_done">Done</button>
+                <button class="status_button_remove">Remove</button>
+            </div>`
+            newli.innerHTML = newliInnerHTML;
+            todo_list.append(newli);
+            todo_input.value = "";
+        })
+
+        todo_list.addEventListener("click",(e)=>{
+            //check if user clicked on any of done or remove button
+            if(e.target.classList.contains("status_button_done")){
+                 const liSpan = e.target.parentNode.previousElementSibling;
+                 liSpan.style.textDecoration = "line-through";
+            }
+            if(e.target.classList.contains("status_button_remove")){
+                const tobeDel = e.target.parentNode.parentNode;
+                tobeDel.remove();
+            }
+        })
+
+    
+        const done_button = document.querySelector(".status_button_done");
+        // console.log(done_button);
+        
+
+    </script>
+</body>
+
+</html>
