@@ -14,8 +14,8 @@
             <h1 class="logo">To-Do App</h1>
             <ul class="nav-items">
                 <li class="nav-items_btn"><a href="">Home</a></li>
-                <li class="nav-items_btn"><a href="">To-Do</a></li>
-                <li class="nav-items_btn"><a href="">Sign Up</a></li>
+                <li class="nav-items_btn-todo"><a href="">To-Do</a></li>
+                <li class="nav-items_btn-signup"><a href="">Sign Up</a></li>
             </ul>
         </nav>
         <div class="task-box">
@@ -97,6 +97,25 @@
             }
         })
 
+        const signup = document.querySelector(".nav-items_btn-signup");
+        signup.addEventListener("click",(e)=>{
+            e.preventDefault();
+            const form = document.querySelector(".sign-section");
+            if (form){
+                form.scrollIntoView({behavior:"smooth"});
+            }
+            console.log("signup clicked");
+        })
+
+        const todo = document.querySelector(".nav-items_btn-todo");
+        todo.addEventListener("click",(e)=>{
+            e.preventDefault();
+            const form = document.querySelector(".task-section");
+            if (form){
+                form.scrollIntoView({behavior:"smooth"});
+            }
+            console.log("todo clicked");
+        })
     
         const done_button = document.querySelector(".status_button_done");
         // console.log(done_button);
