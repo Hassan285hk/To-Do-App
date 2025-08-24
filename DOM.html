@@ -12,11 +12,11 @@
     <header class="header">
         <nav class="navbar">
             <h1 class="logo">To-Do App</h1>
-            <ul class="nav-items">
-                <li class="nav-items_btn"><a href="">Home</a></li>
-                <li class="nav-items_btn-todo"><a href="">To-Do</a></li>
-                <li class="nav-items_btn-signup"><a href="">Sign Up</a></li>
-            </ul>
+            <div class="nav-buttons">
+            <div ><button class="nav-btns home">Home</button></div>
+            <div ><button class="nav-btns tasks">Tasks</button></div>
+            <div ><button class="nav-btns signup">Sign up</button></div>
+            </div>
         </nav>
         <div class="task-box">
             <h1 id="task-title">
@@ -97,7 +97,7 @@
             }
         })
 
-        const signup = document.querySelector(".nav-items_btn-signup");
+        const signup = document.querySelector(".nav-btns.signup");
         signup.addEventListener("click",(e)=>{
             e.preventDefault();
             const form = document.querySelector(".sign-section");
@@ -107,7 +107,7 @@
             console.log("signup clicked");
         })
 
-        const todo = document.querySelector(".nav-items_btn-todo");
+        const todo = document.querySelector(".nav-btns.tasks");
         todo.addEventListener("click",(e)=>{
             e.preventDefault();
             const form = document.querySelector(".task-section");
