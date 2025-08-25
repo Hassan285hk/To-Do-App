@@ -22,7 +22,7 @@
             <h1 id="task-title">
                 Manage Tasks
             </h1>
-            <button class="learn-more" onclick="console.log('Learn more about task management')">Learn More</button>
+            <button class="learn-more" >Learn More</button>
         </div>
     </header>
     <section class="task-section">
@@ -52,6 +52,39 @@
     </section>
 
     <script>
+
+        const logo = document.querySelector(".logo");
+        setInterval(()=>{
+            
+            logo.textContent = "To-Do App";
+            logo.style.color = "black";
+            
+            setTimeout(()=>{
+                logo.style.color = "white";
+            },1000)
+        },3000)
+
+        const toChange = document.querySelector("#task-title");
+        setInterval(() => {
+            toChange.textContent = "Efficiently !!";
+            toChange.style.color = "black";
+            setTimeout(() => {
+                toChange.textContent = "Manage Tasks";
+                toChange.style.color = "White";
+            }, 1000);
+        }, 3000)
+
+        const main_btn = document.querySelector(".learn-more");
+        main_btn.addEventListener("click",()=>{
+            main_btn.textContent="Let's Do It !!";
+            main_btn.style.backgroundColor = "black";
+            main_btn.style.color = "white";
+            const Form = document.querySelector(".task-form");
+            if (Form){
+                Form.scrollIntoView({behavior:"smooth"});
+            }
+
+        })
         // const todo = document.querySelector(".task-section ul");
         // todo.innerHTML += "<li>todo 2</li>";
 
